@@ -1,26 +1,9 @@
-
-
-import { BrowserRouter, Navigate, Route, Routes as Switch } from "react-router-dom";
-import { Dashboard } from "../pages/dashboard/Dashboard";
-
-
-export const Routes = () => {
-    return(
-    <BrowserRouter>
-     <Switch>
-
-
-     <Route   path="/pagina-inicial" element={<Dashboard/>}/>
-     <Route path="*" element={<Navigate to='/pagina-inicial'/>}/>
-     
-     </Switch>
-
-     
-      
-       
-      
-       
-     
-    </BrowserRouter>
-    )
-}
+import { Routes, Route, Navigate } from "react-router-dom";
+export const AppRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/pagina-inicial" element={<p>Pagina inicial </p>} />
+      <Route path="*" element={<Navigate to="/pagina-inicial" />} />
+    </Routes>
+  );
+};
